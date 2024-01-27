@@ -558,19 +558,12 @@ twitch-videoad.js text/javascript
             player.play();
             return;
         }
-
         const lsKeyQuality = 'video-quality';
         const lsKeyMuted = 'video-muted';
         const lsKeyVolume = 'volume';
         var currentQualityLS = localStorage.getItem(lsKeyQuality);
         var currentMutedLS = localStorage.getItem(lsKeyMuted);
         var currentVolumeLS = localStorage.getItem(lsKeyVolume);
-		
-	var overlayElement = document.querySelector('[data-a-target="player-overlay-click-handler"]');
-	if(overlayElement) {
-	    overlayElement.remove();
-	}
-		
         if (player?.core?.state) {
             localStorage.setItem(lsKeyMuted, JSON.stringify({default:player.core.state.muted}));
             localStorage.setItem(lsKeyVolume, player.core.state.volume);
@@ -590,7 +583,6 @@ twitch-videoad.js text/javascript
     function onContentLoaded() {
         // This stops Twitch from pausing the player when in another tab and an ad shows.
         // Taken from https://github.com/saucettv/VideoAdBlockForTwitch/blob/cefce9d2b565769c77e3666ac8234c3acfe20d83/chrome/content.js#L30
-	console.log("twitch ad - on content loaded");
         try {
             Object.defineProperty(document, 'visibilityState', {
                 get() {
