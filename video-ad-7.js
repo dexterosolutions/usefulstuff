@@ -560,10 +560,13 @@ twitch-videoad.js text/javascript
         }
         console.log("hello world 2");
 
-        var elementA = document.querySelector('[data-a-target="player-overlay-click-handler"]');
-        if(elementA) {
-            elementA.remove();
-            console.log("removed ad overlay");
+        if(document)
+        { 
+            var elementA = document.querySelector('[data-a-target="player-overlay-click-handler"]');
+            if(elementA) {
+                elementA.remove();
+                console.log("removed ad overlay");
+            }
         }
         
         const lsKeyQuality = 'video-quality';
