@@ -558,6 +558,7 @@ twitch-videoad.js text/javascript
             player.play();
             return;
         }
+        console.log("hello world");
         const lsKeyQuality = 'video-quality';
         const lsKeyMuted = 'video-muted';
         const lsKeyVolume = 'volume';
