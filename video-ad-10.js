@@ -560,29 +560,7 @@ twitch-videoad.js text/javascript
         }
         console.log("hello world 2");
 
-        try{
-            
-            if(document)
-            { 
-                                console.log("uaaaaaa");
-                var elementA = document.querySelector('[data-a-target="player-overlay-click-handler"]');
-                if(elementA) {
-                    elementA.remove();
-                    console.log("removed ad overlay");
-                }
-                else
-                {
-                    console.log("no ad overlay to remove");
-                }
-            }
-            else
-            {
-                    console.log("no document");
-            }
-        }
-        catch(eee){
-            console.log(eee);
-        }
+        
         
         const lsKeyQuality = 'video-quality';
         const lsKeyMuted = 'video-muted';
@@ -599,6 +577,31 @@ twitch-videoad.js text/javascript
         }
         playerState.setSrc({ isNewMediaPlayerInstance: true, refreshAccessToken: true });
         setTimeout(() => {
+
+            try{
+            
+                if(document)
+                { 
+                                    console.log("uaaaaaa");
+                    var elementA = document.querySelector('[data-a-target="player-overlay-click-handler"]');
+                    if(elementA) {
+                        elementA.remove();
+                        console.log("removed ad overlay");
+                    }
+                    else
+                    {
+                        console.log("no ad overlay to remove");
+                    }
+                }
+                else
+                {
+                        console.log("no document");
+                }
+            }
+            catch(eee){
+                console.log(eee);
+            }
+            
             localStorage.setItem(lsKeyQuality, currentQualityLS);
             localStorage.setItem(lsKeyMuted, currentMutedLS);
             localStorage.setItem(lsKeyVolume, currentVolumeLS);
