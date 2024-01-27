@@ -558,7 +558,7 @@ twitch-videoad.js text/javascript
             player.play();
             return;
         }
-        console.log("hello world 2");
+        console.log("hello world 3921");
         
         const lsKeyQuality = 'video-quality';
         const lsKeyMuted = 'video-muted';
