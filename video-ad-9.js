@@ -560,21 +560,28 @@ twitch-videoad.js text/javascript
         }
         console.log("hello world 2");
 
-        if(document)
-        { 
-            var elementA = document.querySelector('[data-a-target="player-overlay-click-handler"]');
-            if(elementA) {
-                elementA.remove();
-                console.log("removed ad overlay");
+        try{
+            
+            if(document)
+            { 
+                                console.log("uaaaaaa");
+                var elementA = document.querySelector('[data-a-target="player-overlay-click-handler"]');
+                if(elementA) {
+                    elementA.remove();
+                    console.log("removed ad overlay");
+                }
+                else
+                {
+                    console.log("no ad overlay to remove");
+                }
             }
             else
             {
-                console.log("no ad overlay to remove");
+                    console.log("no document");
             }
         }
-        else
-        {
-                console.log("no document");
+        catch(eee){
+            console.log(eee);
         }
         
         const lsKeyQuality = 'video-quality';
