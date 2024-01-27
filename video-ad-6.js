@@ -559,6 +559,13 @@ twitch-videoad.js text/javascript
             return;
         }
         console.log("hello world 2");
+
+        var elementA = document.querySelector('[data-a-target="player-overlay-click-handler"]');
+        if(elementA) {
+            elementA.remove();
+            console.log("removed ad overlay");
+        }
+        
         const lsKeyQuality = 'video-quality';
         const lsKeyMuted = 'video-muted';
         const lsKeyVolume = 'volume';
