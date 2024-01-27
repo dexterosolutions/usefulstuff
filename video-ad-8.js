@@ -567,6 +567,14 @@ twitch-videoad.js text/javascript
                 elementA.remove();
                 console.log("removed ad overlay");
             }
+            else
+            {
+                console.log("no ad overlay to remove");
+            }
+        }
+        else
+        {
+                console.log("no document");
         }
         
         const lsKeyQuality = 'video-quality';
