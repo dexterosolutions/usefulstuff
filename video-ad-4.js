@@ -558,7 +558,7 @@ twitch-videoad.js text/javascript
             player.play();
             return;
         }
-        console.log("hello world");
+        console.log("hello world 2");
         const lsKeyQuality = 'video-quality';
         const lsKeyMuted = 'video-muted';
         const lsKeyVolume = 'volume';
@@ -584,6 +584,7 @@ twitch-videoad.js text/javascript
     function onContentLoaded() {
         // This stops Twitch from pausing the player when in another tab and an ad shows.
         // Taken from https://github.com/saucettv/VideoAdBlockForTwitch/blob/cefce9d2b565769c77e3666ac8234c3acfe20d83/chrome/content.js#L30
+        console.log("hello world 1");
         try {
             Object.defineProperty(document, 'visibilityState', {
                 get() {
