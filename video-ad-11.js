@@ -559,8 +559,6 @@ twitch-videoad.js text/javascript
             return;
         }
         console.log("hello world 2");
-
-        
         
         const lsKeyQuality = 'video-quality';
         const lsKeyMuted = 'video-muted';
@@ -582,20 +580,11 @@ twitch-videoad.js text/javascript
             
                 if(document)
                 { 
-                                    console.log("uaaaaaa");
-                    var elementA = document.querySelector('[data-a-target="player-overlay-click-handler"]');
-                    if(elementA) {
-                        elementA.remove();
-                        console.log("removed ad overlay");
-                    }
-                    else
-                    {
-                        console.log("no ad overlay to remove");
-                    }
+                    console.log("uaaaaaa");
                 }
                 else
                 {
-                        console.log("no document");
+                    console.log("no document");
                 }
             }
             catch(eee){
