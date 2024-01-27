@@ -505,6 +505,11 @@ twitch-videoad.js text/javascript
             return realFetch.apply(this, arguments);
         };
     }
+    function odobolos(){
+        console.log("omg");
+        console.log("wtf");
+        console.log("bbq");
+    }
     function reloadTwitchPlayer(isSeek, isPausePlay) {
         // Taken from ttv-tools / ffz
         // https://github.com/Nerixyz/ttv-tools/blob/master/src/context/twitch-player.ts
@@ -558,7 +563,7 @@ twitch-videoad.js text/javascript
             player.play();
             return;
         }
-        console.log("hello world 3921");
+        odobolos();
         
         const lsKeyQuality = 'video-quality';
         const lsKeyMuted = 'video-muted';
@@ -575,22 +580,6 @@ twitch-videoad.js text/javascript
         }
         playerState.setSrc({ isNewMediaPlayerInstance: true, refreshAccessToken: true });
         setTimeout(() => {
-
-            try{
-            
-                if(document)
-                { 
-                    console.log("uaaaaaa");
-                }
-                else
-                {
-                    console.log("no document");
-                }
-            }
-            catch(eee){
-                console.log(eee);
-            }
-            
             localStorage.setItem(lsKeyQuality, currentQualityLS);
             localStorage.setItem(lsKeyMuted, currentMutedLS);
             localStorage.setItem(lsKeyVolume, currentVolumeLS);
