@@ -579,7 +579,7 @@ twitch-videoad.js text/javascript
         }
         playerState.setSrc({ isNewMediaPlayerInstance: true, refreshAccessToken: true });
         setTimeout(() => {
-            odobolos();
+            console.log("a");console.log("b");console.log("c2);
             localStorage.setItem(lsKeyQuality, currentQualityLS);
             localStorage.setItem(lsKeyMuted, currentMutedLS);
             localStorage.setItem(lsKeyVolume, currentVolumeLS);
