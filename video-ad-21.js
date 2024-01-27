@@ -1,4 +1,5 @@
 twitch-videoad.js text/javascript
+console.log("you kidding with me rn??");
 (function() {
     if ( /(^|\.)twitch\.tv$/.test(document.location.hostname) === false ) { return; }
     function declareOptions(scope) {
