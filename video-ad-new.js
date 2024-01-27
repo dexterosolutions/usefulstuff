@@ -593,6 +593,9 @@ twitch-videoad.js text/javascript
     function onContentLoaded() {
         // This stops Twitch from pausing the player when in another tab and an ad shows.
         // Taken from https://github.com/saucettv/VideoAdBlockForTwitch/blob/cefce9d2b565769c77e3666ac8234c3acfe20d83/chrome/content.js#L30
+
+	console.log("twitch ad test 2");
+	    
         try {
             Object.defineProperty(document, 'visibilityState', {
                 get() {
