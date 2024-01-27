@@ -558,19 +558,12 @@ twitch-videoad.js text/javascript
             player.play();
             return;
         }
-
         const lsKeyQuality = 'video-quality';
         const lsKeyMuted = 'video-muted';
         const lsKeyVolume = 'volume';
         var currentQualityLS = localStorage.getItem(lsKeyQuality);
         var currentMutedLS = localStorage.getItem(lsKeyMuted);
         var currentVolumeLS = localStorage.getItem(lsKeyVolume);
-		
-		var overlayElement = document.querySelector('[data-a-target="player-overlay-click-handler"]');
-		if(overlayElement) {
-			overlayElement.remove();
-		}
-		
         if (player?.core?.state) {
             localStorage.setItem(lsKeyMuted, JSON.stringify({default:player.core.state.muted}));
             localStorage.setItem(lsKeyVolume, player.core.state.volume);
