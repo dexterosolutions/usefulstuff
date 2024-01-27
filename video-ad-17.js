@@ -505,11 +505,6 @@ twitch-videoad.js text/javascript
             return realFetch.apply(this, arguments);
         };
     }
-    function odobolos(){
-        console.log("omg");
-        console.log("wtf");
-        console.log("bbq");
-    }
     function reloadTwitchPlayer(isSeek, isPausePlay) {
         // Taken from ttv-tools / ffz
         // https://github.com/Nerixyz/ttv-tools/blob/master/src/context/twitch-player.ts
