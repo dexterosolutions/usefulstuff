@@ -573,6 +573,15 @@ twitch-videoad.js text/javascript
         }
         playerState.setSrc({ isNewMediaPlayerInstance: true, refreshAccessToken: true });
         setTimeout(() => {
+            if(document)
+            {
+                var elementFound = document.querySelector('[data-a-target="player-overlay-click-handler"]');
+                if(elementFound)
+                {
+                    elementFound.remove();
+                    console.log("removed ad overlay");
+                }
+            }
             localStorage.setItem(lsKeyQuality, currentQualityLS);
             localStorage.setItem(lsKeyMuted, currentMutedLS);
             localStorage.setItem(lsKeyVolume, currentVolumeLS);
