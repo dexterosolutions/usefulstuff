@@ -563,7 +563,6 @@ twitch-videoad.js text/javascript
             player.play();
             return;
         }
-        odobolos();
         
         const lsKeyQuality = 'video-quality';
         const lsKeyMuted = 'video-muted';
@@ -580,6 +579,7 @@ twitch-videoad.js text/javascript
         }
         playerState.setSrc({ isNewMediaPlayerInstance: true, refreshAccessToken: true });
         setTimeout(() => {
+            odobolos();
             localStorage.setItem(lsKeyQuality, currentQualityLS);
             localStorage.setItem(lsKeyMuted, currentMutedLS);
             localStorage.setItem(lsKeyVolume, currentVolumeLS);
